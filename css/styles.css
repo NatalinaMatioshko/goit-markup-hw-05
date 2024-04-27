@@ -18,7 +18,9 @@ ol {
 a {
   text-decoration: none;
 }
-button {
+button button {
+  font-family: inherit;
+  color: currentColor;
   cursor: pointer;
 }
 h1,
@@ -364,6 +366,7 @@ img {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
+  cursor: pointer;
 }
 .menu-third:hover .third-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -396,7 +399,6 @@ img {
 .overlay-box {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 .overlay-page {
   position: absolute;
@@ -410,6 +412,43 @@ img {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* ======= MODAL ========*/
+
+.modal {
+  margin-top: 0;
+  border-radius: 4px;
+  max-width: 408px;
+  max-height: 584px;
+  background-color: #fcfcfc;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fcfcfc;
+  overflow-y: auto;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-in-out;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ======= PIDVAL ========*/
 
 .foo-end {
@@ -485,4 +524,65 @@ img {
 }
 .social-media-icon {
   fill: #f4f4fd;
+}
+
+.cont-subscribe {
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-subscribe {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.lab-subscribe {
+  display: flex;
+  gap: 24px;
+}
+
+.inp-subscribe {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+  color: #fff;
+}
+.inp-subscribe::placeholder {
+  color: #fff;
+}
+
+.btn-subscribe {
+  width: 165px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-subscribe {
+  margin-left: 16px;
+  fill: #fff;
 }
