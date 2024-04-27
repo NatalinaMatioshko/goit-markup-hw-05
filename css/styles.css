@@ -18,10 +18,15 @@ ol {
 a {
   text-decoration: none;
 }
-button button {
-  font-family: inherit;
+button {
   color: currentColor;
   cursor: pointer;
+}
+input,
+textarea,
+button {
+  font-family: inherit;
+  line-height: inherit;
 }
 h1,
 h2,
@@ -447,6 +452,21 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modal-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+
+  border-radius: 4px;
+  width: 360px;
+  height: 336px;
+}
+
+.modal-form p {
+  margin: 0;
 }
 
 /* ======= PIDVAL ========*/
