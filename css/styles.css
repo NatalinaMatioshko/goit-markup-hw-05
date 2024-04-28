@@ -534,7 +534,7 @@ img {
 }
 
 .btn-subscribe {
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -568,8 +568,8 @@ img {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: rgba(46, 47, 66, 0.4),
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibivity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -588,6 +588,7 @@ img {
   overflow-y: auto;
   padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -596,6 +597,7 @@ img {
 }
 
 .mod-btn {
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -615,6 +617,14 @@ img {
 .mod-btn:focus {
   background-color: #404bbf;
   border: none;
+}
+.close-btn {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mod-btn:hover .close-btn,
+.mod-btn:focus .close-btn {
+  fill: #ffffff;
 }
 
 .modal-form p {
@@ -645,6 +655,8 @@ img {
   position: relative;
 }
 .form-input {
+  padding-left: 38px;
+  outline: transparent;
   width: 100%;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -662,8 +674,7 @@ img {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:focuc,
-.modal-name:focus {
+.form-input:focuc + .modal-name {
   fill: #4d5ae5;
 }
 
@@ -673,7 +684,7 @@ img {
 .form-textarea {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 1005;
+  width: 100%;
   height: 120px;
 
   font-size: 12px;
@@ -686,4 +697,30 @@ img {
   outline: transparent;
   padding: 8px 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-textarea:focus {
+  border-color: #4d5ae5;
+}
+.check-privacy {
+  margin-bottom: 24px;
+}
+.check-box {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.check-accent {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }

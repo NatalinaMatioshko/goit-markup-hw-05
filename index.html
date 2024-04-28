@@ -552,8 +552,8 @@
             <label class="lab-subscribe">
               <input
                 class="inp-subscribe"
-                type="text"
-                name="email_address"
+                type="email"
+                name="user-email"
                 placeholder="E-mail"
               />
             </label>
@@ -573,7 +573,7 @@
     <div class="modal-overlay">
       <div class="modal">
         <button class="mod-btn" type="button">
-          <svg class="close-btn" width="8" heigh="8">
+          <svg class="close-btn" width="8" height="8">
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
@@ -641,11 +641,12 @@
             <input
               class="check-inp visually-hidden"
               type="checkbox"
-              name="user-privasy"
+              name="user-privacy"
+              id="user-privacy"
               value="true"
             />
 
-            <label for="user-privacy" class="check-box">
+            <label class="check-box" for="user-privacy">
               <span class="check-accent">
                 <svg class="check-icon" width="10" height="8">
                   <use href="./images/icons.svg#checkmark"></use>
